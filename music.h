@@ -6,7 +6,7 @@ using namespace std;
 
 class Music {
  public:
-  Movies(char[]*, char[]*, int*, char[]*, char[]*);
+  Music(char[]*, char[]*, int*, char*, char*);
   char[]* getArtist();
   char[]* getDuration();
   char[]* getPublisher();
