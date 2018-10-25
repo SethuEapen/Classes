@@ -13,6 +13,6 @@ class Movies {
   int* getYear();
   char[]* getTitle();
  private:
-  char[]* direction;
+  char[]* director;
   char[]* duration;
 }

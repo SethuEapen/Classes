@@ -9,8 +9,6 @@ Movies::Movies(char newTitle[10]*, int newYear*, char newDirector[10]*,
   director = newDirector;
   duration = newDiration;
   rating = newRating;
-  Title = newTitle;
-  year = newYear;
 }
 char[]* Movies::getDirector(){
   return director;
@@ -20,10 +18,4 @@ char[]* Movies::getDuration(){
 }
 float* Movies::getRating(){
   return rating;
-}
-int* Movies::getYear(){
-  return year;
-}
-char[]* Movies::getTitle(){
-  return Title;
 }
