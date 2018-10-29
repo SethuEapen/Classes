@@ -57,8 +57,19 @@ int main()//main method
   return 0;
 }
 
-Student* ADD(){//add function
-  cout << "You entered Add queue" << endl;
+Media* ADD(){//add function
+  char input[10];
+  cout << "What kind of media would you like to add" << endl;
+  cin.get(input, 10);
+  cin.clear();
+  cin.ignore(10000, '\n');
+  if(strcmp(input, "music"){
+
+  }
+  else{
+    cout << "This is not a valid media type";
+    
+  }
   Student* newStud = new Student();//alocate to heap
   cout << "Enter first name: ";
   cin >> newStud->firstName;//what is first name?
