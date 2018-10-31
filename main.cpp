@@ -4,23 +4,22 @@
 #include <string.h>
 #include <iomanip>
 #include "media.h"
+#include "movies.h"
 
 //including the namespace
 using namespace std;
 
 //function init
 Media* ADD();
-vector<Media*> SEARCH(vector<Media*> media, char* name);
-vector<Media*> SEARCH(vector<Media*> media, int* year);
-void DELETE(vector<Media*>* media, char* name);
-void DELETE(vector<Media*>* media, int* year);
+//vector<Media*> SEARCH(vector<Media*> media, char* name);
+//vector<Media*> SEARCH(vector<Media*> media, int* year);
+//void DELETE(vector<Media*>* media, char* name);
+//void DELETE(vector<Media*>* media, int* year);
 
 int main()//main method
 {
   bool exit = false;//determines if the code should continue running
   char input[7];// input for the add print delete exit
-  char name[20];
-  int year;
   vector<Media*> mediaArr;//vector of media pointers
   int idInput;// input for delete
   while(!exit){// main running loop
@@ -30,7 +29,7 @@ int main()//main method
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
       media.push_back(ADD());//run ADD function and put he output into media
-    }
+    }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
       cout << "Enter the title or the year";
       auto input2;
@@ -49,7 +48,7 @@ int main()//main method
     }
     else if(strcmp(input, "exit") == 0){//if input is exit...
       exit = true;//change the value of exit to true to stop the program
-    }
+      }*/
     else {
       cout << "Sorry I dont know what you mean" << endl;
     }
@@ -59,17 +58,30 @@ int main()//main method
 
 Media* ADD(){//add function
   char input[10];
+  char title[10];
+  int year;
+  char director[10];
+  char durration[8];
+  float rating;
   cout << "What kind of media would you like to add" << endl;
   cin.get(input, 10);
   cin.clear();
   cin.ignore(10000, '\n');
-  if(strcmp(input, "music"){
-
+  if(strcmp(input, "movie")){
+    cin.get(title, 10);
+    cin >> year;
+    cin.get(director, 10);
+    cin.get(durration, 8);
+    cin >> rating;
+    Movie* movie = new Movie(&title, year, &director, &durration, rating);
+    return movie;
   }
   else{
     cout << "This is not a valid media type";
-    
+    return NULL;
   }
+}
+  /*
   Student* newStud = new Student();//alocate to heap
   cout << "Enter first name: ";
   cin >> newStud->firstName;//what is first name?
@@ -89,18 +101,8 @@ Media* ADD(){//add function
   cin.ignore(100000, '\n');
   return newStud;//return a student pointer
 }
-void PRINT(vector<Student*> students){//print function
-  cout << "You entered the Print queue" << endl;
-  vector<Student*>::iterator it;//get a vetor student pointer itorator
-  for(it = students.begin(); it != students.end(); ++it){//iterates through the student vector
-    //following lines print out the students vector
-    cout << "Student name: " << (*it)->firstName << " " << (*it)->lastName << endl;
-    cout << "Student ID: " << (*it)->id << endl;
-    cout << "Student GPA: " << fixed << setprecision(2) << (*it)->gpa << endl;
-    cout << endl;
-  }
+void SEARCH(vector<Student*> students){
 }
-
 void DELETE(vector<Student*>* students, int id){
   vector<Student*>::iterator it;//Student pointer iterator
   for(it = students->begin(); it != students->end(); ++it){//iterates through students
@@ -112,3 +114,4 @@ void DELETE(vector<Student*>* students, int id){
   }
   cout << "Invalid ID" << endl;//if the function reaches here the id was invalid.
 }
+  */

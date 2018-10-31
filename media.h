@@ -3,12 +3,13 @@
 
 using namespace std;
 
-class Media {
+class Media
+{
  public:
   Media(char*, int*);
   int* getYear();
   char* getTitle();
  private:
-  int* year;
-  char Title*;
+  int year;
+  char Title;
 };

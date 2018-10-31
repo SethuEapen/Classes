@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include "media.h"
+#include "movies.h"
 
 using namespace std;
 
@@ -10,12 +11,12 @@ Movies::Movies(char newTitle[10]*, int newYear*, char newDirector[10]*,
   duration = newDiration;
   rating = newRating;
 }
-char[]* Movies::getDirector(){
+char* Movies::getDirector(){
   return director;
 }
-char[]* Movies::getDuration(){
+char* Movies::getDuration(){
   return duration;
 }
-float* Movies::getRating(){
+float Movies::getRating(){
   return rating;
 }
