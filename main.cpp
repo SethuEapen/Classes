@@ -28,7 +28,7 @@ int main()//main method
     cin.clear();
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
-      media.push_back(ADD());//run ADD function and put he output into media
+      mediaArr.push_back(ADD());//run ADD function and put the output into media
     }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
       cout << "Enter the title or the year";
@@ -73,7 +73,7 @@ Media* ADD(){//add function
     cin.get(director, 10);
     cin.get(durration, 8);
     cin >> rating;
-    Movie* movie = new Movie(&title, year, &director, &durration, rating);
+    Movies* movie = new Movies(title, year, director, durration, rating);
     return movie;
   }
   else{

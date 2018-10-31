@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Media::Media(char newTitle[10]*, int newYear){
-  Title = newTitle;
+Media::Media(char* newTitle, int newYear){
+  title = newTitle;
   year = newYear;
 }
 int* Room::getYear(){

@@ -1,3 +1,5 @@
+#ifndef MEDIA
+#define MEDIA
 #include <iostream>
 #include <string.h>
 
@@ -11,5 +13,7 @@ class Media
   char* getTitle();
  private:
   int year;
-  char Title;
+  char* title;
 };
+
+#endif

@@ -5,10 +5,10 @@
 
 using namespace std;
 
-Movies::Movies(char newTitle[10]*, int newYear*, char newDirector[10]*,
-	       char newDuration[8]*, float* newRating){
+Movies::Movies(char* newTitle, int newYear, char* newDirector,
+	       char* newDuration, float newRating){
   director = newDirector;
-  duration = newDiration;
+  duration = newDuration;
   rating = newRating;
 }
 char* Movies::getDirector(){
