@@ -1,16 +1,19 @@
 #include <iostream>
 #include <string.h>
-#include <media.h>
+#include "media.h"
 
 using namespace std;
 
-Media::Media(char* newTitle, int newYear){
-  title = newTitle;
-  year = newYear;
+Media::Media(){
+
 }
-int* Room::getYear(){
+//Media::Media(char* newTitle, int newYear){
+//  title = newTitle;
+//  year = newYear;
+//}
+int Media::getYear(){
   return year;
 }
-char[]* Room::getTitle(){
-  return Title*;
+char* Media::getTitle(){
+  return title;
 }

@@ -67,12 +67,22 @@ Media* ADD(){//add function
   cin.get(input, 10);
   cin.clear();
   cin.ignore(10000, '\n');
-  if(strcmp(input, "movie")){
+  if(strcmp(input, "movie") == 0){
     cin.get(title, 10);
+    cin.clear();
+    cin.ignore(10000, '\n');
     cin >> year;
+    cin.clear();
+    cin.ignore(10000, '\n');
     cin.get(director, 10);
+    cin.clear();
+    cin.ignore(10000, '\n');
     cin.get(durration, 8);
+    cin.clear();
+    cin.ignore(10000, '\n');      
     cin >> rating;
+    cin.clear();
+    cin.ignore(10000, '\n');
     Movies* movie = new Movies(title, year, director, durration, rating);
     return movie;
   }

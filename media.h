@@ -8,8 +8,9 @@ using namespace std;
 class Media
 {
  public:
+  Media();
   Media(char*, int*);
-  int* getYear();
+  int getYear();
   char* getTitle();
  private:
   int year;
@@ -17,3 +18,4 @@ class Media
 };
 
 #endif
+
