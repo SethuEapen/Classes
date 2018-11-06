@@ -1,0 +1,25 @@
+#ifndef MEDIA
+#define MEDIA
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class Media
+{
+ public:
+  Media();
+  Media(char*, int*);
+  virtual int Media::getYear();
+  virtual char* Media::getTitle();
+  virtual char* Media::getDirector();
+  virtual char* Media::getDuration();
+  virtual float Media:getRating();
+  
+ private:
+  int year;
+  char* title;
+};
+
+#endif
+

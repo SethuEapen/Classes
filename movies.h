@@ -13,6 +13,8 @@ class Movies : public Media {
   int getYear();
   char* getTitle();
  private:
+  int year;
+  char* title;
   char* director;
   char* duration;
   float rating;

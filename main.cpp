@@ -29,6 +29,7 @@ int main()//main method
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
       mediaArr.push_back(ADD());//run ADD function and put the output into media
+      cout << mediaArr[1]->getDirector() << endl;
     }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
       cout << "Enter the title or the year";

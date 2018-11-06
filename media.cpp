@@ -17,3 +17,13 @@ int Media::getYear(){
 char* Media::getTitle(){
   return title;
 }
+char* Media::getDirector(){
+  return director;
+}
+char* Media::getDuration(){
+  return duration;
+}
+float Media::getRating(){
+  return rating;
+}
+

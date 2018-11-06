@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string.h>
+#include "media.h"
+
+using namespace std;
+
+Media::Media(){
+
+}
+//Media::Media(char* newTitle, int newYear){
+//  title = newTitle;
+//  year = newYear;
+//}
+virtual int Media::getYear(){
+  return year;
+}
+virtual char* Media::getTitle(){
+  return title;
+}
+virtual char* Movies::getDirector(){
+  return director;
+}
+virtual char* Movies::getDuration(){
+  return duration;
+}
+virtual float Movies::getRating(){
+  return rating;
+}
+

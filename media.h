@@ -10,11 +10,18 @@ class Media
  public:
   Media();
   Media(char*, int*);
-  int getYear();
-  char* getTitle();
+  virtual int getYear();
+  virtual char* getTitle();
+  virtual char* getDirector();
+  virtual char* getDuration();
+  virtual float getRating();
+  
  private:
   int year;
   char* title;
+  char* director;
+  char* duration;
+  float rating;
 };
 
 #endif

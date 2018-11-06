@@ -11,6 +11,13 @@ Movies::Movies(char* newTitle, int newYear, char* newDirector,
   duration = newDuration;
   rating = newRating;
 }
+
+int Movies::getYear(){
+  return year;
+}
+char* Movies::getTitle(){
+  return title;
+}
 char* Movies::getDirector(){
   return director;
 }
