@@ -26,4 +26,3 @@ char* Media::getDuration(){
 float Media::getRating(){
   return rating;
 }
-

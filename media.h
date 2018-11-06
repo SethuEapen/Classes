@@ -15,8 +15,6 @@ class Media
   virtual char* getDirector();
   virtual char* getDuration();
   virtual float getRating();
-  
- private:
   int year;
   char* title;
   char* director;
