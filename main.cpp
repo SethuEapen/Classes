@@ -10,7 +10,7 @@
 using namespace std;
 
 //function init
-Media* ADD();
+Media* ADD(vector<Media*>* media);
 //vector<Media*> SEARCH(vector<Media*> media, char* name);
 //vector<Media*> SEARCH(vector<Media*> media, int* year);
 //void DELETE(vector<Media*>* media, char* name);
@@ -28,7 +28,7 @@ int main()//main method
     cin.clear();
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
-      mediaArr.push_back(ADD());//run ADD function and put the output into media
+      mediaArr.push_back(ADD(&mediaArr));//run ADD function and put the output into media
       cout << mediaArr.at(0) -> getDirector() << endl;
     }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
@@ -57,34 +57,39 @@ int main()//main method
   return 0;
 }
 
-Media* ADD(){//add function
-  char input[10];
+Media* ADD(vector<Media*>* media){//add function
+  /*char input[10];
   char title[10];
   int year;
   char director[10];
   char durration[8];
-  float rating;
+  float rating;*/
   cout << "What kind of media would you like to add" << endl;
   cin.get(input, 10);
   cin.clear();
   cin.ignore(10000, '\n');
   if(strcmp(input, "movie") == 0){
-    cin.get(title, 10);
+    Movies* movie = new Movies();
+	cout << "Title: ";
+	cin.get(movie -> title, 10);
     cin.clear();
     cin.ignore(10000, '\n');
-    cin >> year;
+    cout << "Year: ";
+	cin >> movie -> year;
     cin.clear();
     cin.ignore(10000, '\n');
-    cin.get(director, 10);
+    cout << "Director: ";
+	cin.get(movie -> director, 10);
     cin.clear();
     cin.ignore(10000, '\n');
-    cin.get(durration, 8);
-    cin.clear();
-    cin.ignore(10000, '\n');      
-    cin >> rating;
+	cout << "Durration: ";
+    cin.get(movies -> durration, 8);
     cin.clear();
     cin.ignore(10000, '\n');
-    Movies* movie = new Movies(title, year, director, durration, rating);
+	cout << "Rating: ";	
+    cin >> movies -> rating;
+    cin.clear();
+    cin.ignore(10000, '\n');
     return movie;
   }
   else{

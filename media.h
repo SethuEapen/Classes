@@ -9,17 +9,12 @@ class Media
 {
  public:
   Media();
-  Media(char*, int*);
-  virtual int getYear();
-  virtual char* getTitle();
-  virtual char* getDirector();
-  virtual char* getDuration();
-  virtual float getRating();
+//  Media(char*, int*);
+  int getYear();
+  char* getTitle();
+  virtual int getType() = 0;
   int year;
   char* title;
-  char* director;
-  char* duration;
-  float rating;
 };
 
 #endif

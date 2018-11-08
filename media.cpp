@@ -4,7 +4,8 @@
 
 using namespace std;
 
-Media::Media(){
+Media::Media()
+{
 
 }
 //Media::Media(char* newTitle, int newYear){
@@ -17,7 +18,7 @@ int Media::getYear(){
 char* Media::getTitle(){
   return title;
 }
-char* Media::getDirector(){
+/*char* Media::getDirector(){
   return director;
 }
 char* Media::getDuration(){
@@ -25,4 +26,4 @@ char* Media::getDuration(){
 }
 float Media::getRating(){
   return rating;
-}
+}*/
