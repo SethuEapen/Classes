@@ -10,7 +10,7 @@
 using namespace std;
 
 //function init
-Media* ADD(vector<Media*>* media);
+void ADD(vector<Media*>* media);
 //vector<Media*> SEARCH(vector<Media*> media, char* name);
 //vector<Media*> SEARCH(vector<Media*> media, int* year);
 //void DELETE(vector<Media*>* media, char* name);
@@ -28,8 +28,8 @@ int main()//main method
     cin.clear();
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
-      mediaArr.push_back(ADD(&mediaArr));//run ADD function and put the output into media
-      cout << mediaArr.at(0) -> getDirector() << endl;
+      ADD(&mediaArr);
+	  cout << mediaArr.at(0) -> getDirector() << endl;
     }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
       cout << "Enter the title or the year";
@@ -57,7 +57,7 @@ int main()//main method
   return 0;
 }
 
-Media* ADD(vector<Media*>* media){//add function
+void ADD(vector<Media*>* media){//add function
   /*char input[10];
   char title[10];
   int year;
@@ -90,7 +90,7 @@ Media* ADD(vector<Media*>* media){//add function
     cin >> movies -> rating;
     cin.clear();
     cin.ignore(10000, '\n');
-    return movie;
+    media->push_back(movie);//run ADD function and put the output into media;
   }
   else{
     cout << "This is not a valid media type";
