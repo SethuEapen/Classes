@@ -29,7 +29,7 @@ int main()//main method
     cin.ignore(100000, '\n');
     if(strcmp(input, "add") == 0){//if the input is add...
       ADD(&mediaArr);
-	  cout << mediaArr.at(0) -> getDirector() << endl;
+	  cout << dynamic_cast<Movies*>(mediaArr[0])->year;
     }/*
     else if(strcmp(input, "search") == 0){//if the input is search...
       cout << "Enter the title or the year";
@@ -58,8 +58,8 @@ int main()//main method
 }
 
 void ADD(vector<Media*>* media){//add function
-  /*char input[10];
-  char title[10];
+  char input[10];
+  /*char title[10];
   int year;
   char director[10];
   char durration[8];
@@ -83,18 +83,17 @@ void ADD(vector<Media*>* media){//add function
     cin.clear();
     cin.ignore(10000, '\n');
 	cout << "Durration: ";
-    cin.get(movies -> durration, 8);
+    cin.get(movie -> duration, 8);
     cin.clear();
     cin.ignore(10000, '\n');
 	cout << "Rating: ";	
-    cin >> movies -> rating;
+    cin >> movie -> rating;
     cin.clear();
     cin.ignore(10000, '\n');
     media->push_back(movie);//run ADD function and put the output into media;
   }
   else{
     cout << "This is not a valid media type";
-    return NULL;
   }
 }
   /*

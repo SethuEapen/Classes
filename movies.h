@@ -7,10 +7,11 @@ using namespace std;
 class Movies : public Media {
  public:
   Movies();
-  char* getDirector();
-  char* getDuration();
-  float getRating();
   int getType();
+//  char* getDirector();
+//  char* getDuration();
+//  float getRating();
+//  int getType();
 
   //int getYear();
   //char* getTitle();

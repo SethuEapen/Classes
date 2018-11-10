@@ -12,12 +12,12 @@ Media::Media()
 //  title = newTitle;
 //  year = newYear;
 //}
-int Media::getYear(){
+/*int Media::getYear(){
   return year;
 }
 char* Media::getTitle(){
   return title;
-}
+}*/
 /*char* Media::getDirector(){
   return director;
 }
